@@ -1,0 +1,424 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+            <div>
+                <label class="resource-label">{{localize "Ex3.Ability"}}: </label>
+                <select name="system.ability" data-type="String">
+                    {{#select system.ability}}
+                    <option value="strength">{{localize "Ex3.Strength"}}</option>
+                    <option value="dexterity">{{localize "Ex3.Dexterity"}}</option>
+                    <option value="stamina">{{localize "Ex3.Stamina"}}</option>
+                    <option value="charisma">{{localize "Ex3.Charisma"}}</option>
+                    <option value="manipulation">{{localize "Ex3.Manipulation"}}</option>
+                    <option value="appearance">{{localize "Ex3.Appearance"}}</option>
+                    <option value="perception">{{localize "Ex3.Perception"}}</option>
+                    <option value="intelligence">{{localize "Ex3.Intelligence"}}</option>
+                    <option value="wits">{{localize "Ex3.Wits"}}</option>
+                    <option value="archery">{{localize "Ex3.Archery"}}</option>
+                    <option value="athletics">{{localize "Ex3.Athletics"}}</option>
+                    <option value="awareness">{{localize "Ex3.Awareness"}}</option>
+                    <option value="brawl">{{localize "Ex3.Brawl"}}</option>
+                    <option value="bureaucracy">{{localize "Ex3.Bureaucracy"}}</option>
+                    <option value="craft">{{localize "Ex3.Craft"}}</option>
+                    <option value="dodge">{{localize "Ex3.Dodge"}}</option>
+                    <option value="integrity">{{localize "Ex3.Integrity"}}</option>
+                    <option value="investigation">{{localize "Ex3.Investigation"}}</option>
+                    <option value="larceny">{{localize "Ex3.Larceny"}}</option>
+                    <option value="linguistics">{{localize "Ex3.Linguistics"}}</option>
+                    <option value="lore">{{localize "Ex3.Lore"}}</option>
+                    <option value="martialarts">{{localize "Ex3.MartialArts"}}</option>
+                    <option value="medicine">{{localize "Ex3.Medicine"}}</option>
+                    <option value="melee">{{localize "Ex3.Melee"}}</option>
+                    <option value="occult">{{localize "Ex3.Occult"}}</option>
+                    <option value="performance">{{localize "Ex3.Performance"}}</option>
+                    <option value="presence">{{localize "Ex3.Presence"}}</option>
+                    <option value="resistance">{{localize "Ex3.Resistance"}}</option>
+                    <option value="ride">{{localize "Ex3.Ride"}}</option>
+                    <option value="sail">{{localize "Ex3.Sail"}}</option>
+                    <option value="socialize">{{localize "Ex3.Socialize"}}</option>
+                    <option value="stealth">{{localize "Ex3.Stealth"}}</option>
+                    <option value="survival">{{localize "Ex3.Survival"}}</option>
+                    <option value="thrown">{{localize "Ex3.Thrown"}}</option>
+                    <option value="war">{{localize "Ex3.War"}}</option>
+                    <option value="evocation">{{localize "Ex3.Evocation"}}</option>
+                    <option value="universal">{{localize "Ex3.Universal"}}</option>
+                    <option value="offensive">{{localize "Ex3.Offensive"}}</option>
+                    <option value="defensive">{{localize "Ex3.Defensive"}}</option>
+                    <option value="social">{{localize "Ex3.Social"}}</option>
+                    <option value="mobility">{{localize "Ex3.Mobility"}}</option>
+                    <option value="other">{{localize "Ex3.Other"}}</option>
+                    {{/select}}
+                </select>
+                <label class="resource-label">{{localize "Ex3.Requirement"}}: </label>
+                <select name="system.requirement" data-type="String">
+                    {{#select system.requirement}}
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    {{/select}}
+                </select>
+                <label class="resource-label">{{localize "Ex3.Essence"}}: </label>
+                <select name="system.essence" data-type="String">
+                    {{#select system.essence}}
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    {{/select}}
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="description">{{localize "Ex3.Description"}}</a>
+        <a class="item" data-tab="effects">{{localize "Ex3.Effects"}}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Description Tab --}}
+        <div class="tab" data-group="primary" data-tab="description">
+            <div class="flex-center">
+                <div class="resource-label">{{localize "Ex3.Prerequisites"}} (Comma Separated)</div>
+            </div>
+            <input type="text" name="system.prerequisites" value="{{system.prerequisites}}" />
+            <div class="flex-center mt-1">
+                <div class="resource-label">{{localize "Ex3.Keywords"}} <i
+                        class="fas fa-info-circle show-keywords cursor-pointer"></i></div>
+            </div>
+            <textarea type="text" name="system.keywords" rows="2">{{system.keywords}}</textarea>
+            <div class="grid grid-3col flex-group-center">
+                <div>
+                    <div class="resource-label">{{localize "Ex3.CharmType"}}</div>
+                    <select name="system.charmtype" data-type="String">
+                        {{#select system.charmtype}}
+                        <option value="abyssal">{{localize "Ex3.Abyssal"}}</option>
+                        <option value="alchemical">{{localize "Ex3.Alchemical"}}</option>
+                        <option value="architect">{{localize "Ex3.Architect"}}</option>
+                        <option value="dragonblooded">{{localize "Ex3.Dragonblooded"}}</option>
+                        <option value="dreamsouled">{{localize "Ex3.DreamSouled"}}</option>
+                        <option value="evocation">{{localize "Ex3.Evocation"}}</option>
+                        <option value="exigent">{{localize "Ex3.Exigent"}}</option>
+                        <option value="getimian">{{localize "Ex3.Getimian"}}</option>
+                        <option value="hearteater">{{localize "Ex3.Hearteater"}}</option>
+                        <option value="infernal">{{localize "Ex3.Infernal"}}</option>
+                        <option value="janest">{{localize "Ex3.Janest"}}</option>
+                        <option value="liminal">{{localize "Ex3.Liminal"}}</option>
+                        <option value="lunar">{{localize "Ex3.Lunar"}}</option>
+                        <option value="martialarts">{{localize "Ex3.MartialArts"}}</option>
+                        <option value="sidereal">{{localize "Ex3.Sidereal"}}</option>
+                        <option value="solar">{{localize "Ex3.Solar"}}</option>
+                        <option value="sovereign">{{localize "Ex3.Sovereign"}}</option>
+                        <option value="umbral">{{localize "Ex3.Umbral"}}</option>
+                        <option value="other">{{localize "Ex3.Other"}}</option>
+                        {{/select}}
+                    </select>
+                </div>
+                <div>
+                    <div class="resource-label">{{localize "Ex3.Type"}}</div>
+                    <input type="text" name="system.type" value="{{system.type}}" />
+                </div>
+                <div>
+                    <div class="resource-label">{{localize "Ex3.Duration"}}</div>
+                    <input type="text" name="system.duration" value="{{system.duration}}" />
+                </div>
+            </div>
+            <div class="flex-center">
+                <div class="resource-label">{{localize "Ex3.Cost"}}</div>
+            </div>
+            <div class="d-flex flex-center resources">
+                <div>
+                    <div class="resource-label">{{localize "Ex3.Motes"}}</div>
+                    <input type="number" name="system.cost.motes" value="{{system.cost.motes}}" data-dtype="Number" />
+                </div>
+                <div>
+                    <div class="resource-label">{{localize "Ex3.Initiative"}}</div>
+                    <input type="number" name="system.cost.initiative" value="{{system.cost.initiative}}"
+                        data-dtype="Number" />
+                </div>
+                <div>
+                    <div class="resource-label">{{localize "Ex3.Anima"}}</div>
+                    <input type="number" name="system.cost.anima" value="{{system.cost.anima}}" data-dtype="Number" />
+                </div>
+                <div>
+                    <div class="resource-label">{{localize "Ex3.Willpower"}}</div>
+                    <input type="number" name="system.cost.willpower" value="{{system.cost.willpower}}"
+                        data-dtype="Number" />
+                </div>
+            </div>
+            <div class="grid grid-4col flex-group-center">
+                <div>
+                    <div class="resource-label">{{localize "Ex3.Health"}}</div>
+                    <input type="number" name="system.cost.health" value="{{system.cost.health}}"
+                        data-dtype="Number" />
+                </div>
+                <div>
+                    <div class="resource-label">{{localize "Ex3.HealthType"}}</div>
+                    <select name="system.cost.healthtype" data-type="String">
+                        {{#select system.cost.healthtype}}
+                        <option value="bashing">{{localize "Ex3.Bashing"}}</option>
+                        <option value="lethal">{{localize "Ex3.Lethal"}}</option>
+                        <option value="aggravated">{{localize "Ex3.Aggravated"}}</option>
+                        {{/select}}
+                    </select>
+                </div>
+                <div>
+                    <div class="resource-label">{{localize "Ex3.Aura"}}</div>
+                    <select name="system.cost.aura" data-type="String">
+                        {{#select system.cost.aura}}
+                        <option value=""></option>
+                        <option value="any">{{localize "Ex3.Any"}}</option>
+                        <option value="air">{{localize "Ex3.Air"}}</option>
+                        <option value="earth">{{localize "Ex3.Earth"}}</option>
+                        <option value="fire">{{localize "Ex3.Fire"}}</option>
+                        <option value="water">{{localize "Ex3.Water"}}</option>
+                        <option value="wood">{{localize "Ex3.Wood"}}</option>
+                        {{/select}}
+                    </select>
+                </div>
+                <div>
+                    <div class="resource-label">{{localize "Ex3.XP"}}</div>
+                    <input type="number" name="system.cost.xp" value="{{system.cost.xp}}" data-dtype="Number" />
+                </div>
+            </div>
+            <div class="flex-center">
+                <div class="resource-label">{{localize "Ex3.Craft"}} {{localize "Ex3.Cost"}}</div>
+            </div>
+            <div class="grid grid-3col flex-group-center">
+                <div>
+                    <div class="resource-label">{{localize "Ex3.Silver"}}</div>
+                    <input type="number" name="system.cost.silverxp" value="{{system.cost.silverxp}}"
+                        data-dtype="Number" />
+                </div>
+                <div>
+                    <div class="resource-label">{{localize "Ex3.Gold"}}</div>
+                    <input type="number" name="system.cost.goldxp" value="{{system.cost.goldxp}}"
+                        data-dtype="Number" />
+                </div>
+                <div>
+                    <div class="resource-label">{{localize "Ex3.White"}}</div>
+                    <input type="number" name="system.cost.whitexp" value="{{system.cost.whitexp}}"
+                        data-dtype="Number" />
+                </div>
+            </div>
+            {{editor system.description target="system.description" button=true owner=owner editable=true}}
+        </div>
+
+        <div class="tab" data-group="primary" data-tab="effects">
+            <div class="resource flex-center">
+                <label class="resource-label">{{localize "Ex3.DiceRollModifiers"}}</label>
+            </div>
+            <div class="resource grid grid-2col flex-center">
+                <div>
+                    <label class="resource-label">{{localize "Ex3.DiceBonus"}} </label>
+                    <input name="system.diceroller.bonusdice" value="{{system.diceroller.bonusdice}}" type="number">
+                </div>
+                <div>
+                    <label class="resource-label">{{localize "Ex3.SuccessBonus"}} </label>
+                    <input name="system.diceroller.bonussuccesses" value="{{system.diceroller.bonussuccesses}}"
+                        type="number">
+                </div>
+                <div>
+                    <label class="resource-label">{{localize "Ex3.TargetNumber"}} </label>
+                    <input name="system.diceroller.targetnumber" value="{{system.diceroller.targetnumber}}"
+                        type="number">
+                </div>
+
+                <div>
+                    <label class="resource-label">{{localize "Ex3.DoubleSuccess"}} + </label>
+                    <input name="system.diceroller.doublesuccess" value="{{system.diceroller.doublesuccess}}"
+                        type="number">
+                </div>
+            </div>
+
+            <div>
+                <div class="resource grid grid-3col flex-center">
+                    <div>
+                        <label class="resource-label">{{localize "Ex3.RerollNumDice"}} </label>
+                        <input name="system.diceroller.rerolldice" value="{{system.diceroller.rerolldice}}"
+                            type="number">
+                    </div>
+                    <div>
+                        <label class="resource-label">{{localize "Ex3.DicetoSuccesses"}} </label>
+                        <input name="system.diceroller.diceToSuccesses" value="{{system.diceroller.diceToSuccesses}}"
+                        type="number">
+                    </div>
+                    <div>
+                        <label class="resource-label">{{localize "Ex3.RerollFailed"}} </label>
+                        <div>
+                            <input type="checkbox" name="system.diceroller.rerollfailed"
+                                value="{{system.diceroller.rerollfailed}}" {{checked
+                                system.diceroller.rerollfailed}}>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resource flex-center">
+                <label class="resource-label">{{localize "Ex3.Reroll"}}</label>
+            </div>
+            <div class="resource d-flex flex-center">
+                <div>
+                    <div>1</div>
+                    <input name="system.diceroller.reroll.one" value="system.diceroller.reroll.one" type="checkbox"
+                        {{checked system.diceroller.reroll.one}}>
+                </div>
+                <div>
+                    <div>2</div>
+                    <input name="system.diceroller.reroll.two" value="system.diceroller.reroll.two" type="checkbox"
+                        {{checked system.diceroller.reroll.two}}>
+                </div>
+                <div>
+                    <div>3</div>
+                    <input name="system.diceroller.reroll.three" value="system.diceroller.reroll.three" type="checkbox"
+                        {{checked system.diceroller.reroll.three}}>
+                </div>
+                <div>
+                    <div>4</div>
+                    <input name="system.diceroller.reroll.four" value="system.diceroller.reroll.four" type="checkbox"
+                        {{checked system.diceroller.reroll.four}}>
+                </div>
+                <div>
+                    <div>5</div>
+                    <input name="system.diceroller.reroll.five" value="system.diceroller.reroll.five" type="checkbox"
+                        {{checked system.diceroller.reroll.five}}>
+                </div>
+                <div>
+                    <div>6</div>
+                    <input name="system.diceroller.reroll.six" value="system.diceroller.reroll.six" type="checkbox"
+                        {{checked system.diceroller.reroll.six}}>
+                </div>
+                <div>
+                    <div>7</div>
+                    <input name="system.diceroller.reroll.seven" value="system.diceroller.reroll.seven" type="checkbox"
+                        {{checked system.diceroller.reroll.seven}}>
+                </div>
+                <div>
+                    <div>8</div>
+                    <input name="system.diceroller.reroll.eight" value="system.diceroller.reroll.eight" type="checkbox"
+                        {{checked system.diceroller.reroll.eight}}>
+                </div>
+                <div>
+                    <div>9</div>
+                    <input name="system.diceroller.reroll.nine" value="system.diceroller.reroll.nine" type="checkbox"
+                        {{checked system.diceroller.reroll.nine}}>
+                </div>
+                <div>
+                    <div>10</div>
+                    <input name="system.diceroller.reroll.ten" value="system.diceroller.reroll.ten" type="checkbox"
+                        {{checked system.diceroller.reroll.ten}}>
+                </div>
+            </div>
+            <div class="flex-center resource-label" style="font-weight: bold;">
+                Damage
+            </div>
+            <div>
+                <div class="resource grid grid-2col flex-center">
+                    <div>
+                        <label class="resource-label">{{localize "Ex3.DamageDice"}} </label>
+                        <input type="number" name="system.diceroller.damage.bonusdice"
+                            value="{{system.diceroller.damage.bonusdice}}">
+                    </div>
+                    <div>
+                        <label class="resource-label">{{localize "Ex3.DamageSuccesses"}} </label>
+                        <input type="number" name="system.diceroller.damage.bonussuccesses"
+                            value="{{system.diceroller.damage.bonussuccesses}}">
+                    </div>
+                </div>
+                <div class="resource grid grid-2col flex-center">
+                    <div>
+                        <label class="resource-label">{{localize "Ex3.DoubleSuccess"}} + </label>
+                        <input type="number" name="system.diceroller.damage.doublesuccess"
+                            value="{{system.diceroller.damage.doublesuccess}}">
+                    </div>
+                    <div>
+                        <label class="resource-label">{{localize "Ex3.TargetNumber"}} </label>
+                        <input type="number" name="system.diceroller.damage.targetnumber"
+                            value="{{system.diceroller.damage.targetnumber}}">
+                    </div>
+                    <div>
+                        <label class="resource-label">{{localize "Ex3.Overwhelming"}} </label>
+                        <input type="number" name="system.diceroller.damage.overwhelming"
+                            value="{{system.diceroller.damage.overwhelming}}">
+                    </div>
+                    <div>
+                        <label class="resource-label">{{localize "Ex3.PostSoakDamage"}} </label>
+                        <input type="number" name="system.diceroller.damage.postsoakdamage"
+                            value="{{system.diceroller.damage.postsoakdamage}}">
+                    </div>
+                </div>
+                <div class="resource flex-center">
+                    <label class="resource-label">{{localize "Ex3.Reroll"}}</label>
+                </div>
+                <div class="resource d-flex flex-center">
+                    <div>
+                        <div>1</div>
+                        <input name="system.diceroller.damage.reroll.one" value="system.diceroller.damage.reroll.one"
+                            type="checkbox" {{checked system.diceroller.damage.reroll.one}}>
+                    </div>
+                    <div>
+                        <div>2</div>
+                        <input name="system.diceroller.damage.reroll.two" value="system.diceroller.damage.reroll.two"
+                            type="checkbox" {{checked system.diceroller.damage.reroll.two}}>
+                    </div>
+                    <div>
+                        <div>3</div>
+                        <input name="system.diceroller.damage.reroll.three" value="system.diceroller.damage.reroll.three"
+                            type="checkbox" {{checked system.diceroller.damage.reroll.three}}>
+                    </div>
+                    <div>
+                        <div>4</div>
+                        <input name="system.diceroller.damage.reroll.four" value="system.diceroller.damage.reroll.four"
+                            type="checkbox" {{checked system.diceroller.damage.reroll.four}}>
+                    </div>
+                    <div>
+                        <div>5</div>
+                        <input name="system.diceroller.damage.reroll.five" value="system.diceroller.damage.reroll.five"
+                            type="checkbox" {{checked system.diceroller.damage.reroll.five}}>
+                    </div>
+                    <div>
+                        <div>6</div>
+                        <input name="system.diceroller.damage.reroll.six" value="system.diceroller.damage.reroll.six"
+                            type="checkbox" {{checked data.damage.reroll.six}}>
+                    </div>
+                    <div>
+                        <div>7</div>
+                        <input name="system.diceroller.damage.reroll.seven" value="system.diceroller.damage.reroll.seven"
+                            type="checkbox" {{checked system.diceroller.damage.reroll.seven}}>
+                    </div>
+                    <div>
+                        <div>8</div>
+                        <input name="system.diceroller.damage.reroll.eight" value="system.diceroller.damage.reroll.eight"
+                            type="checkbox" {{checked system.diceroller.damage.reroll.eight}}>
+                    </div>
+                    <div>
+                        <div>9</div>
+                        <input name="system.diceroller.damage.reroll.nine" value="system.diceroller.damage.reroll.nine"
+                            type="checkbox" {{checked system.diceroller.damage.reroll.nine}}>
+                    </div>
+                    <div>
+                        <div>10</div>
+                        <input name="system.diceroller.damage.reroll.ten" value="system.diceroller.damage.reroll.ten"
+                            type="checkbox" {{checked system.diceroller.damage.reroll.ten}}>
+                    </div>
+                </div>
+            </div>
+            {{> systems/exaltedthird/templates/actor/active-effects.html}}
+        </div>
+
+    </section>
+</form>
