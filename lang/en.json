@@ -1,0 +1,25 @@
+{
+	"fw":{
+	"attack":{
+	"none":"",
+	"martialArts":"Martial Arts",
+	"lightsaberTechnique":"Lightsaber Technique",
+	"forcePower":"Force Power",
+	"punch":"Punch",
+	"kick":"Kick",
+	"gadget":"Gadget"
+	}},
+	"weapon":{
+	"templates":["itemDescription"],
+	"attackWith":"MartialArts",	
+	"speed":"",
+	"rate":"",
+	"accuracy":"",
+	"def":"",
+	"damage":"",
+	"damageType":"",
+	"weight":"",
+	"ability":"",
+	"range":0,
+	"bonus":0
+}
