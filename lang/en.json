@@ -1,22 +1,22 @@
 {
-  "BOILERPLATE.AbilityStr": "Strength",
-  "BOILERPLATE.AbilityCon": "Constitution",
-  "BOILERPLATE.AbilityDex": "Dexterity",
-  "BOILERPLATE.AbilityInt": "Intelligence",
-  "BOILERPLATE.AbilityWis": "Wisdom",
-  "BOILERPLATE.AbilityCha": "Charisma",
+  "FORCEWINDS.AbilityStr": "Strength",
+  "FORCEWINDS.AbilityCon": "Constitution",
+  "FORCEWINDS.AbilityDex": "Dexterity",
+  "FORCEWINDS.AbilityInt": "Intelligence",
+  "FORCEWINDS.AbilityWis": "Wisdom",
+  "FORCEWINDS.AbilityCha": "Charisma",
 
-  "BOILERPLATE.AbilityStrAbbr": "str",
-  "BOILERPLATE.AbilityConAbbr": "con",
-  "BOILERPLATE.AbilityDexAbbr": "dex",
-  "BOILERPLATE.AbilityIntAbbr": "int",
-  "BOILERPLATE.AbilityWisAbbr": "wis",
-  "BOILERPLATE.AbilityChaAbbr": "cha",
+  "FORCEWINDS.AbilityStrAbbr": "str",
+  "FORCEWINDS.AbilityConAbbr": "con",
+  "FORCEWINDS.AbilityDexAbbr": "dex",
+  "FORCEWINDS.AbilityIntAbbr": "int",
+  "FORCEWINDS.AbilityWisAbbr": "wis",
+  "FORCEWINDS.AbilityChaAbbr": "cha",
 
-  "BOILERPLATE.EffectCreate": "Create Effect",
-  "BOILERPLATE.EffectToggle": "Toggle Effect",
-  "BOILERPLATE.EffectEdit": "Edit Effect",
-  "BOILERPLATE.EffectDelete": "Delete Effect",
+  "FORCEWINDS.EffectCreate": "Create Effect",
+  "FORCEWINDS.EffectToggle": "Toggle Effect",
+  "FORCEWINDS.EffectEdit": "Edit Effect",
+  "FORCEWINDS.EffectDelete": "Delete Effect",
 
-  "BOILERPLATE.Add": "Add"
+  "FORCEWINDS.Add": "Add"
 }
