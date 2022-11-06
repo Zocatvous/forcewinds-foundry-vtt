@@ -1,0 +1,23 @@
+{
+  "name": "forcewinds-foundry-vtt",
+  "version": "1.0.0",
+  "description": "This is a system for Jake Greaves Forcewinds VTT system - very much a work in progress - based upon the Boilerplate system designed by @ascolips",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremycloud/forcewinds-foundry-vtt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeremycloud/forcewinds-foundry-vtt/issues"
+  },
+  "homepage": "https://github.com/jeremycloud/forcewinds-foundry-vtt#readme",
+  "devDependencies": {
+    "eslint": "^8.26.0",
+    "eslint-config-airbnb-base": "^15.0.0"
+  }
+}
