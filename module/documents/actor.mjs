@@ -31,7 +31,11 @@ export class ForcewindsActor extends Actor {
   prepareDerivedData() {
     const actorData = this;
     const systemData = actorData.system;
+<<<<<<< HEAD
     const flags = actorData.flags.forcewinds || {};
+=======
+    const flags = actorData.flags.boilerplate || {};
+>>>>>>> ec004ea2b35d76cd2f6f76eaaa0e4743cc7e4b35
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.

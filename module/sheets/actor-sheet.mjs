@@ -19,7 +19,11 @@ export class ForcewindsActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
+<<<<<<< HEAD
     return `systems/forcewinds/templates/actor/actor-${this.actor.type}-sheet.html`;
+=======
+    return `systems/boilerplate/templates/actor/actor-${this.actor.type}-sheet.html`;
+>>>>>>> ec004ea2b35d76cd2f6f76eaaa0e4743cc7e4b35
   }
 
   /* -------------------------------------------- */
@@ -69,7 +73,11 @@ export class ForcewindsActorSheet extends ActorSheet {
   _prepareCharacterData(context) {
     // Handle ability scores.
     for (let [k, v] of Object.entries(context.system.abilities)) {
+<<<<<<< HEAD
       v.label = game.i18n.localize(CONFIG.FORCEWINDS.abilities[k]) ?? k;
+=======
+      v.label = game.i18n.localize(CONFIG.BOILERPLATE.abilities[k]) ?? k;
+>>>>>>> ec004ea2b35d76cd2f6f76eaaa0e4743cc7e4b35
     }
   }
 

@@ -97,7 +97,11 @@ async function createItemMacro(data, slot) {
   const item = await Item.fromDropData(data);
 
   // Create the macro command using the uuid.
+<<<<<<< HEAD:module/forcewinds.mjs
   const command = `game.forcewinds.rollItemMacro("${data.uuid}");`;
+=======
+  const command = `game.boilerplate.rollItemMacro("${data.uuid}");`;
+>>>>>>> ec004ea2b35d76cd2f6f76eaaa0e4743cc7e4b35:module/boilerplate.mjs
   let macro = game.macros.find(m => (m.name === item.name) && (m.command === command));
   if (!macro) {
     macro = await Macro.create({

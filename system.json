@@ -1,7 +1,13 @@
 {
+<<<<<<< HEAD
   "id": "forcewinds",
   "title": "Forcewinds",
   "description": "The Forcewinds system for FoundryVTT!",
+=======
+  "id": "boilerplate",
+  "title": "Boilerplate",
+  "description": "The Boilerplate system for FoundryVTT!",
+>>>>>>> ec004ea2b35d76cd2f6f76eaaa0e4743cc7e4b35
   "version": "1.2.0",
   "compatibility": {
     "minimum": 10,
@@ -11,8 +17,13 @@
   "authors": [{
     "name": "Asacolips"
   }],
+<<<<<<< HEAD
   "esmodules": ["module/forcewinds.mjs"],
   "styles": ["css/forcewinds.css"],
+=======
+  "esmodules": ["module/boilerplate.mjs"],
+  "styles": ["css/boilerplate.css"],
+>>>>>>> ec004ea2b35d76cd2f6f76eaaa0e4743cc7e4b35
   "scripts": [],
   "packs": [],
   "languages": [
