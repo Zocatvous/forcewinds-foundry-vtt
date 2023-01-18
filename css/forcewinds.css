@@ -70,3 +70,29 @@
 .grid-spacer h3 {
   text-align: center;
 }
+
+.grid-container-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 900px;
+}
+
+.centered-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 0 auto;
+    padding: 0px 50px;
+}
+
+.force-grid-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 10px 5px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  flex-wrap: nowrap;
+}
