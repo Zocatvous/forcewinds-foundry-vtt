@@ -49,6 +49,19 @@
 
 .grid-spacer {
   display: grid;
+  font: normal 16px Arial, sans-serif;
+  font-size: 17px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  padding: 2px;
+}
+
+.grid-spacer2 {
+  display: grid;
+  font: normal 16px Arial, sans-serif;
+  font-wieght: normal;
+  text-align: center;
+  font-size: 12px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
   padding: 2px;
